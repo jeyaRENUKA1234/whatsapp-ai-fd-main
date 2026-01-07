@@ -1,0 +1,45 @@
+/* src/styles/globals.scss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #0f172a; // dark slate
+  color: #e5e7eb;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+/* Force dark background overlay for Shadcn Dialog */
+
+/* Dark fullscreen overlay */
+[data-state="open"] ~ .fixed.inset-0 {
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Hide the default close (X) button */
+button[data-state="open"] svg,
+button[aria-label="Close"] {
+  display: none !important;
+}

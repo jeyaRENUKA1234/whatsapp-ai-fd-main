@@ -1,0 +1,239 @@
+/* src/styles/admin-layout.module.scss */
+
+.adminLayout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 100vh;
+  background: #020617;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brandLogo {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0%, #38bdf8, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0b1120;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandTitle {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.brandSubtitle {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.navSectionLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.navItem {
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  color: #e5e7eb;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.1s ease;
+}
+
+.navItemIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.navItemActive {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.16), transparent);
+  color: #f9fafb;
+  border: 1px solid rgba(129, 140, 248, 0.5);
+}
+
+.navItem:hover {
+  background: rgba(15, 23, 42, 0.9);
+  transform: translateY(-1px);
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.3);
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* MAIN AREA */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.6);
+  background: radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.16), transparent 55%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topbarLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.topTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.topSubtitle {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.searchInput {
+  position: relative;
+}
+
+.searchInput input {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 999px;
+  border: 1px solid rgba(30, 64, 175, 0.9);
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.searchInput input::placeholder {
+  color: #6b7280;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+  color: #052e16;
+  font-weight: 600;
+}
+
+.userAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: radial-gradient(circle at 30% 0%, #facc15, #f97316);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0b1120;
+}
+
+.mainContent {
+  padding: 1.5rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .adminLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.75rem;
+  }
+
+  .navSectionLabel {
+    display: none;
+  }
+
+  .navList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .navItem {
+    padding-inline: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .main {
+    min-height: auto;
+  }
+
+  .topbar {
+    padding-inline: 1rem;
+  }
+
+  .mainContent {
+    padding: 1rem;
+  }
+}

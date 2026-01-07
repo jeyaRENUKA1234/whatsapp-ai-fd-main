@@ -1,0 +1,111 @@
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: grid;
+  gap: 0.2rem;
+
+  label {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 600;
+  }
+
+  input {
+    background: white;
+    padding: 0.55rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color:black;
+    outline: none;
+    font-size: 0.85rem;
+    &::placeholder {
+      color:black;
+    //   border: 2px solid #9333ea;
+    }
+    &:focus {
+      border: 2px solid #9333ea;
+    }
+  }
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #f87171;
+  margin-top: -0.5rem;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+// margin-top: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(50deg, #9333ea, #3b82f6);
+  color: #0f172a;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+.googleButton {
+  width: 100%;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #9333ea;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  // background: gray;
+  background: white;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #f3f4f6;
+  }
+}
+.inputWrapper {
+  position: relative;
+  width: 100%;
+   label {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 600;
+  }
+
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 14px;
+  color:black;
+  outline: none;
+   &::placeholder {
+      color:black;
+    }
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 12px;
+  top: 65%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #9333ea;
+  cursor: pointer;
+}
+.inputField:focus {
+    border: 2px solid #9333ea;
+  }
