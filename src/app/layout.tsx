@@ -1,26 +1,3 @@
-// import type { Metadata } from "next";
-// import "@/styles/globals.scss";
-// import ClientProviders from "./ClientProviders";
-// import Header from "../components/Header";
-
-// export const metadata: Metadata = {
-//   title: "Admin Panel",
-//   description: "Next.js + TypeScript + SCSS Admin Panel",
-// };
-
-// export default function RootLayout({ children }: { children: React.ReactNode }) {
-//   return (
-//     <html lang="en">
-//       <body>
-//         <ClientProviders>
-//           <Header />
-//           {children}
-//         </ClientProviders>
-//       </body>
-//     </html>
-//   );
-// }
-// src/app/ClientProviders.tsx
 "use client";
 
 import Header from "../components/Header";
